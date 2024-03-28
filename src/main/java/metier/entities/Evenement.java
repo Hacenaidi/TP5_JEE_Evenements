@@ -18,9 +18,23 @@ private Long idEvenement;
 private String nomEvenement;
 @Column (name="DATE_EVENEMENT")
 private  String DateEvenement;
+private Type type;
+public Evenement(String nomEvenement, String DateEvenement,Type ty) {
+super();
+this.nomEvenement = nomEvenement;
+this.DateEvenement = DateEvenement;
+this.setType(ty);
+}
+public Type getType() {
+return type;
+}
+public void setType(Type type) {
+this.type = type;
+}
 public Evenement() {
 super();
 }
+
 public Evenement(String nomEvenement, String DateEvenement) {
 super();
 this.nomEvenement = nomEvenement;

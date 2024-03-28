@@ -26,12 +26,13 @@
  <table class="table table-striped">
  <tr>
  <th>ID</th><th>Nom Evenement</th><th>Date Evenement</th><th>Suppression</th><th>Edition</th>
- </tr>
+ <th>Type</th></tr>
  <c:forEach items="${model.evenements}" var="e">
  <tr>
 <td>${e.idEvenement}</td>
 <td>${e.nomEvenement}</td>
 <td>${e.getDateEvenement()}</td>
+<td>${e.type.nomType }</td>
 <td><a onclick="return confirm('Etes-vous sûr ?')"href="supprimer.do?id=${e.idEvenement }">Supprimer</a></td>
  <td><a href="editer.do?id=${e.idEvenement }">Edit</a></td>
  </tr>

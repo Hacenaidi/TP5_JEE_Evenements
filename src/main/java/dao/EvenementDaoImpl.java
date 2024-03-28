@@ -5,7 +5,7 @@ import javax.persistence.EntityTransaction;
 import metier.entities.Evenement;
 import util.JPAutil;
 public class EvenementDaoImpl implements IEvenementDao {
-private EntityManager entityManager=JPAutil.getEntityManager("TP5_JEE_evenement");
+private EntityManager entityManager=JPAutil.getEntityManager("TP6_JEE_evenement");
 @Override
 public Evenement save(Evenement e) {
 	EntityTransaction tx = entityManager.getTransaction();

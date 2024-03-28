@@ -34,6 +34,17 @@ value="${evenement.nomEvenement}"/>
 <label class="control-label">Date Evenement :</label>
 <input type="date" name="date" class="form-control" value="${evenement.getDateEvenement()}"/>
 </div>
+<div class="form-group"> 
+ <select name="type" class="form-control">
+ <option value="${evenement.type.idType}"
+selected>${evenement.type.nomType}</option>
+ <c:forEach items="${typeModel.types}" var="ty"> 
+ <c:if test="${ty.idType != evenement.type.idType}"> 
+ <option value="${ty.idType}">${ty.nomType}</option>
+ </c:if>
+ </c:forEach>
+ </select>
+</div>
 <div>
 <button type="submit" class="btn btn-primary">Modifier</button>
 </div>
